@@ -9,7 +9,7 @@ You can specify the amount of hours to wait between snapshots. It will use the s
 
 # Filename
 The filename format is as follows:  
-<Your Specified Name> Year-Month-Day Hour-Minutes-Seconds AM/PM.7z
+**Your Specified Name - Year-Month-Day Hour-Minutes-Seconds AM/PM.7z**
 
 # Requisites
 You must have 7-zip installed in the C:\Program Files\7-zip folder. This software launches the 7z.exe command line software to compress the blockchain.
