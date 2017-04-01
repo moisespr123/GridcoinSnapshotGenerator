@@ -432,4 +432,8 @@ Public Class Form1
         Dim timeFormatted As TimeSpan = TimeSpan.FromSeconds(secondsremaining)
         Label17.Text = String.Format("{0}:{1:mm}:{1:ss}", CInt(Math.Truncate(timeFormatted.TotalHours)), timeFormatted)
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Donations.ShowDialog()
+    End Sub
 End Class
