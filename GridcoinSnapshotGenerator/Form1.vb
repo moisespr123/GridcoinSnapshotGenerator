@@ -34,7 +34,7 @@ Public Class Form1
         'Now, we will compress the txleveldb folder and the blk0001.dat file
         Dim CompressionProcess As New ProcessStartInfo("C:\Program Files\7-zip\7z.exe")
         Dim AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\GridcoinResearch"
-        CompressionProcess.Arguments = "a -m0=LZMA2 -mmt -mx9 """ & Path.GetDirectoryName(TextBox1.Text) & "\" & Path.GetFileNameWithoutExtension(TextBox1.Text) & " " & DateTime.Now.ToString("yyyy-MM-dd hh-mm-ss tt") & ".7z"" """ & AppDataPath & "\txleveldb"" """ & AppDataPath & "\blk0001.dat"""
+        CompressionProcess.Arguments = "a -m0=LZMA2 -mmt -mx9 """ & Path.GetDirectoryName(TextBox1.Text) & "\" & Path.GetFileNameWithoutExtension(TextBox1.Text) & " - " & DateTime.Now.ToString("yyyy-MM-dd hh-mm-ss tt") & ".7z"" """ & AppDataPath & "\txleveldb"" """ & AppDataPath & "\blk0001.dat"""
         Dim StartProcess As Process = Process.Start(CompressionProcess)
         StartProcess.WaitForExit()
         'Backup should now be complete and we will launch the wallet again!
