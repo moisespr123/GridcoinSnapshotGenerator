@@ -6,6 +6,9 @@ This is a tool that creates a snapshot of the Gridcoin Blockchain. The software 
 4. Optionally, upload the snapshot to Google Drive (see Google Drive Integration below)
 3. Once the compression is finished, it will launch the wallet again.
 
+# VERY IMPORTANT NOTE:
+Beware of 3rd-party snapshot backups. This tool is meant to be used as personal snapshot tool. If you are unsure if a snapshot is legitimate, please ask in the #gridcoin IRC channel in the Freenode server.
+
 # Timer
 You can specify the amount of hours to wait between snapshots. It will use the specified filename with the date and time appended to it at the end.
 
