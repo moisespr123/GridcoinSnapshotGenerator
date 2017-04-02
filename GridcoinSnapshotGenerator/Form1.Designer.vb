@@ -37,8 +37,8 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -163,7 +163,7 @@ Partial Class Form1
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(16, 13)
         Me.Label7.TabIndex = 10
-        Me.Label7.Text = "r3"
+        Me.Label7.Text = "r4"
         '
         'GroupBox1
         '
@@ -176,16 +176,6 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Archive Format"
         '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 19)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(42, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.Text = "ZIP"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
@@ -195,6 +185,16 @@ Partial Class Form1
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.Text = "7zip (Better compression)"
         Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(6, 19)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(42, 17)
+        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.Text = "ZIP"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'CheckBox1
         '

@@ -32,7 +32,14 @@ Public Class Form1
         SaveFileDialog1.Filter = "7zip File (*.7z)|*.7z|ZIP File (*.zip)|*.zip" 'Extension to show
         SaveFileDialog1.FileName = Path.GetFileName(TextBox1.Text) 'Filename
         SaveFileDialog1.ShowDialog() 'Shows Dialog
-        If String.IsNullOrEmpty(SaveFileDialog1.FileName) = False Then TextBox1.Text = SaveFileDialog1.FileName 'If the filename is not empty, show the specified filename in the textbox1
+        If String.IsNullOrEmpty(SaveFileDialog1.FileName) = False Then
+            TextBox1.Text = SaveFileDialog1.FileName 'If the filename is not empty, show the specified filename in the textbox1
+            If Path.GetExtension(SaveFileDialog1.FileName) = ".zip" Then
+                RadioButton1.Checked = True
+            Else
+                RadioButton2.Checked = True
+            End If
+        End If
     End Sub
     Private UploadCancellationToken As System.Threading.CancellationToken
     Private starttime As DateTime
@@ -364,11 +371,17 @@ Public Class Form1
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
         My.Settings.Format = "zip"
         My.Settings.Save()
+        If String.IsNullOrEmpty(TextBox1.Text) = False Then
+            TextBox1.Text = Path.GetDirectoryName(TextBox1.Text) & "\" & Path.GetFileNameWithoutExtension(TextBox1.Text) & ".zip"
+        End If
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         My.Settings.Format = "7z"
         My.Settings.Save()
+        If String.IsNullOrEmpty(TextBox1.Text) = False Then
+            TextBox1.Text = Path.GetDirectoryName(TextBox1.Text) & "\" & Path.GetFileNameWithoutExtension(TextBox1.Text) & ".7z"
+        End If
     End Sub
 
     Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
