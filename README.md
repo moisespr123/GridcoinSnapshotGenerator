@@ -27,7 +27,7 @@ You must have 7-zip installed in the C:\Program Files\7-zip folder. This softwar
 
 # FAQ
 *I get an error about 7zip.  
--The software must likely is not installed in C:\Program Files\7-zip. Please install it to that directory
+-The software most likely is not installed in C:\Program Files\7-zip. Please install it to that directory
 
 *I get the message "GridcoinResearch.exe could not be found. Please launch the wallet manually"  
 -The wallet is not installed in either "C:\Program Files (x86)\GridcoinResearch\" or "C:\Program Files\GridcoinResearch\". The software looks for these 2 paths to launch the wallet once the compression finishes.
