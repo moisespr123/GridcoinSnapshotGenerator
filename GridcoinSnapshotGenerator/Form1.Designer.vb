@@ -163,7 +163,7 @@ Partial Class Form1
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(16, 13)
         Me.Label7.TabIndex = 10
-        Me.Label7.Text = "r4"
+        Me.Label7.Text = "r5"
         '
         'GroupBox1
         '
