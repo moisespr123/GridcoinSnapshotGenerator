@@ -364,6 +364,7 @@ Public Class Form1
         If My.Settings.MD5 = True Then CheckBox3.Checked = True
         If My.Settings.SHA256 = True Then CheckBox4.Checked = True
         If My.Settings.SHA512 = True Then CheckBox5.Checked = True
+        If My.Settings.Upload = True Then CheckBox1.Checked = True
         If String.IsNullOrEmpty(My.Settings.UploadFolder) = False Then TextBox2.Text = My.Settings.UploadFolder
         If String.IsNullOrEmpty(My.Settings.UploadFolderID) = False Then DriveFolderID = My.Settings.UploadFolderID
     End Sub
