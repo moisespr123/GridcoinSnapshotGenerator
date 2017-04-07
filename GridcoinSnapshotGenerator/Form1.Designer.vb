@@ -62,10 +62,19 @@ Partial Class Form1
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton8 = New System.Windows.Forms.RadioButton()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -174,7 +183,7 @@ Partial Class Form1
         Me.GroupBox1.Size = New System.Drawing.Size(257, 45)
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Archive Format"
+        Me.GroupBox1.Text = "Archive Format:"
         '
         'RadioButton2
         '
@@ -199,7 +208,7 @@ Partial Class Form1
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(308, 12)
+        Me.CheckBox1.Location = New System.Drawing.Point(298, 105)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(137, 17)
         Me.CheckBox1.TabIndex = 13
@@ -209,7 +218,7 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(305, 35)
+        Me.Label8.Location = New System.Drawing.Point(295, 128)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(104, 13)
         Me.Label8.TabIndex = 14
@@ -218,7 +227,7 @@ Partial Class Form1
         'TextBox2
         '
         Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(308, 50)
+        Me.TextBox2.Location = New System.Drawing.Point(298, 143)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(170, 20)
         Me.TextBox2.TabIndex = 15
@@ -226,7 +235,7 @@ Partial Class Form1
         'Button3
         '
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(484, 48)
+        Me.Button3.Location = New System.Drawing.Point(474, 141)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 16
@@ -395,12 +404,12 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Controls.Add(Me.Label14)
         Me.GroupBox3.Controls.Add(Me.Label15)
-        Me.GroupBox3.Location = New System.Drawing.Point(298, 159)
+        Me.GroupBox3.Location = New System.Drawing.Point(298, 168)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(415, 100)
         Me.GroupBox3.TabIndex = 30
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Upload Status"
+        Me.GroupBox3.Text = "Upload Status:"
         '
         'Label19
         '
@@ -420,11 +429,91 @@ Partial Class Form1
         Me.Button4.Text = "Donate me some coins!"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.RadioButton5)
+        Me.GroupBox4.Controls.Add(Me.RadioButton4)
+        Me.GroupBox4.Controls.Add(Me.RadioButton3)
+        Me.GroupBox4.Location = New System.Drawing.Point(298, 11)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(117, 88)
+        Me.GroupBox4.TabIndex = 33
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Date Format:"
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(10, 19)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(81, 17)
+        Me.RadioButton3.TabIndex = 0
+        Me.RadioButton3.TabStop = True
+        Me.RadioButton3.Text = "MM-dd-yyyy"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'RadioButton4
+        '
+        Me.RadioButton4.AutoSize = True
+        Me.RadioButton4.Location = New System.Drawing.Point(10, 41)
+        Me.RadioButton4.Name = "RadioButton4"
+        Me.RadioButton4.Size = New System.Drawing.Size(81, 17)
+        Me.RadioButton4.TabIndex = 1
+        Me.RadioButton4.TabStop = True
+        Me.RadioButton4.Text = "dd-MM-yyyy"
+        Me.RadioButton4.UseVisualStyleBackColor = True
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Location = New System.Drawing.Point(10, 64)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(81, 17)
+        Me.RadioButton5.TabIndex = 2
+        Me.RadioButton5.TabStop = True
+        Me.RadioButton5.Text = "yyyy-MM-dd"
+        Me.RadioButton5.UseVisualStyleBackColor = True
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.RadioButton7)
+        Me.GroupBox5.Controls.Add(Me.RadioButton8)
+        Me.GroupBox5.Location = New System.Drawing.Point(421, 12)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(128, 88)
+        Me.GroupBox5.TabIndex = 34
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Time Format:"
+        '
+        'RadioButton7
+        '
+        Me.RadioButton7.AutoSize = True
+        Me.RadioButton7.Location = New System.Drawing.Point(10, 41)
+        Me.RadioButton7.Name = "RadioButton7"
+        Me.RadioButton7.Size = New System.Drawing.Size(73, 17)
+        Me.RadioButton7.TabIndex = 1
+        Me.RadioButton7.TabStop = True
+        Me.RadioButton7.Text = "HH-mm-ss"
+        Me.RadioButton7.UseVisualStyleBackColor = True
+        '
+        'RadioButton8
+        '
+        Me.RadioButton8.AutoSize = True
+        Me.RadioButton8.Location = New System.Drawing.Point(10, 19)
+        Me.RadioButton8.Name = "RadioButton8"
+        Me.RadioButton8.Size = New System.Drawing.Size(109, 17)
+        Me.RadioButton8.TabIndex = 0
+        Me.RadioButton8.TabStop = True
+        Me.RadioButton8.Text = "hh-mm-ss AM/PM"
+        Me.RadioButton8.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(725, 305)
+        Me.Controls.Add(Me.GroupBox5)
+        Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.GroupBox3)
@@ -456,6 +545,10 @@ Partial Class Form1
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -500,4 +593,11 @@ Partial Class Form1
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Button4 As Button
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents RadioButton5 As RadioButton
+    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents RadioButton3 As RadioButton
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents RadioButton7 As RadioButton
+    Friend WithEvents RadioButton8 As RadioButton
 End Class

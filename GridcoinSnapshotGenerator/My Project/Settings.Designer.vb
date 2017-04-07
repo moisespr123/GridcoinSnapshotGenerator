@@ -161,6 +161,30 @@ Namespace My
                 Me("UploadFolderID") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("3")>  _
+        Public Property DateFormat() As Integer
+            Get
+                Return CType(Me("DateFormat"),Integer)
+            End Get
+            Set
+                Me("DateFormat") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property TimeFormat() As Integer
+            Get
+                Return CType(Me("TimeFormat"),Integer)
+            End Get
+            Set
+                Me("TimeFormat") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

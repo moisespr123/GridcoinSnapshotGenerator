@@ -63,7 +63,21 @@ Public Class Form1
         'Now, we will compress the txleveldb folder and the blk0001.dat file
         Dim CompressionProcess As New ProcessStartInfo("C:\Program Files\7-zip\7z.exe")
         Dim AppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\GridcoinResearch"
-        Dim SnapshotFileName As String = Path.GetDirectoryName(TextBox1.Text) & "\" & Path.GetFileNameWithoutExtension(TextBox1.Text) & " - " & DateTime.Now.ToString("yyyy-MM-dd hh-mm-ss tt")
+        Dim SnapshotDateFormat As String = ""
+        If RadioButton3.Checked Then
+            SnapshotDateFormat = "MM-dd-yyyy"
+        ElseIf RadioButton4.Checked Then
+            SnapshotDateFormat = "dd-MM-yyyy"
+        ElseIf RadioButton5.Checked Then
+            SnapshotDateFormat = "yyyy-MM-dd"
+        End If
+        Dim SnapshotTimeFormat As String = ""
+        If RadioButton8.Checked Then
+            SnapshotTimeFormat = "hh-mm-ss tt"
+        ElseIf RadioButton7.Checked Then
+            SnapshotTimeFormat = "HH-mm-ss"
+        End If
+        Dim SnapshotFileName As String = Path.GetDirectoryName(TextBox1.Text) & "\" & Path.GetFileNameWithoutExtension(TextBox1.Text) & " - " & DateTime.Now.ToString(SnapshotDateFormat & " " & SnapshotTimeFormat)
         Dim FileNameExtension As String = ""
         Dim CompressionArguments As String = ""
         If RadioButton1.Checked = True Then
@@ -367,6 +381,18 @@ Public Class Form1
         If My.Settings.Upload = True Then CheckBox1.Checked = True
         If String.IsNullOrEmpty(My.Settings.UploadFolder) = False Then TextBox2.Text = My.Settings.UploadFolder
         If String.IsNullOrEmpty(My.Settings.UploadFolderID) = False Then DriveFolderID = My.Settings.UploadFolderID
+        If My.Settings.DateFormat = 1 Then
+            RadioButton3.Checked = True
+        ElseIf My.Settings.DateFormat = 2 Then
+            RadioButton4.Checked = True
+        Else
+            RadioButton5.Checked = True
+        End If
+        If My.Settings.TimeFormat = 1 Then
+            RadioButton8.Checked = True
+        Else
+            RadioButton7.Checked = True
+        End If
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
@@ -449,5 +475,40 @@ Public Class Form1
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Donations.ShowDialog()
+    End Sub
+
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
+        If RadioButton3.Checked Then
+            My.Settings.DateFormat = 1
+            My.Settings.Save()
+        End If
+    End Sub
+
+    Private Sub RadioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton4.CheckedChanged
+        If RadioButton4.Checked Then
+            My.Settings.DateFormat = 2
+            My.Settings.Save()
+        End If
+    End Sub
+
+    Private Sub RadioButton5_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton5.CheckedChanged
+        If RadioButton5.Checked Then
+            My.Settings.DateFormat = 3
+            My.Settings.Save()
+        End If
+    End Sub
+
+    Private Sub RadioButton8_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton8.CheckedChanged
+        If RadioButton8.Checked Then
+            My.Settings.TimeFormat = 1
+            My.Settings.Save()
+        End If
+    End Sub
+
+    Private Sub RadioButton7_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton7.CheckedChanged
+        If RadioButton7.Checked Then
+            My.Settings.TimeFormat = 2
+            My.Settings.Save()
+        End If
     End Sub
 End Class
